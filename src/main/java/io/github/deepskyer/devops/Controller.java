@@ -12,6 +12,6 @@ public class Controller {
     @RequestMapping("/")
     @ResponseBody
     public ResponseEntity<?> gethome(){
-        return new ResponseEntity<>("Hello World", HttpStatus.OK);
+        return new ResponseEntity<>("Hello World from github", HttpStatus.OK);
     }
 }
