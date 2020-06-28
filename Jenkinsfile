@@ -4,7 +4,7 @@ node{
     }
 
     stage('Compile Package') {
-        bat mvn package
+        bat 'mvn package'
     }
 
     stage('Build image') {
@@ -13,7 +13,7 @@ node{
 
     stage('Test image') {
         app.inside {
-            echo "Tests passed"
+            echo 'Tests passed'
         }
     }
 
@@ -22,6 +22,6 @@ node{
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
            }
-            echo "Trying to push image to docker hub"
+            echo 'Trying to push image to docker hub'
     }
 }
