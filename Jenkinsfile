@@ -8,7 +8,7 @@ node{
     }
 
     stage('Build image') {
-        app = docker.build("bingms/devops")
+        app = docker.build("bingms/devops:win -f docker-windows/Dockerfile .")
     }
 
     stage('Test image') {
