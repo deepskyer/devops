@@ -4,7 +4,7 @@ node{
     }
 
     stage('Compile Package') {
-        bat 'mvn clean install'
+        call 'mvn clean install'
     }
 
     stage('Build image') {
