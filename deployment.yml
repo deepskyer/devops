@@ -6,6 +6,8 @@ metadata:
     app: spring-devops
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
   selector:
     matchLabels:
       app: spring-app
@@ -16,6 +18,6 @@ spec:
     spec:
       containers:
         - name: spring-devops-container
-          image: bingms/devops
+          image: bingms/devops:latest
           ports:
             - containerPort: 8080

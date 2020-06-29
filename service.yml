@@ -13,4 +13,4 @@ spec:
       targetPort: 8080
       #outside port
       #nodePort: 30001
-  type: LoadBalancer
+  #type: LoadBalancer
