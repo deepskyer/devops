@@ -12,6 +12,10 @@ public class Controller {
     @RequestMapping("/")
     @ResponseBody
     public ResponseEntity<?> gethome(){
-        return new ResponseEntity<>("change", HttpStatus.OK);
+        return new ResponseEntity<>("git commit #triggers CI build\n" +
+                "docker build yourimage\n" +
+                "docker push yourimage\n" +
+                "sed -i 's/{{TAG}}/' deployment.yml\n" +
+                "kubectl apply -f deployment.yml", HttpStatus.OK);
     }
 }
