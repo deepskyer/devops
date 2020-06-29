@@ -12,6 +12,6 @@ public class Controller {
     @RequestMapping("/")
     @ResponseBody
     public ResponseEntity<?> gethome(){
-        return new ResponseEntity<>("Hello World from github", HttpStatus.OK);
+        return new ResponseEntity<>("From intellij to github. Jenkins build docker image, push to the hub. K8s pull the image, deploy it using ingress.", HttpStatus.OK);
     }
 }
