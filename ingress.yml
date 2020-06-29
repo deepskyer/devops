@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+spec:
+  rules:
+    - host: devops.io
+      http:
+        paths:
+          - backend:
+              serviceName: devops-service
+              servicePort: 6000
