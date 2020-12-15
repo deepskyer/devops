@@ -16,7 +16,7 @@ node{
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
            }
-            echo 'Trying to push image to docker hub'
+            echo 'Pushed image to docker hub'
     }
 
     stage('Deploy to k8s'){
