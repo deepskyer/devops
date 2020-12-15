@@ -18,7 +18,9 @@ spec:
     spec:
       containers:
         - name: spring-devops-container
-          image: bingms/devops:14
+          image: bingms/devops:latest
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
+      imagePullSecrets:
+        - name: myregistrykey

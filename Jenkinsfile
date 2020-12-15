@@ -18,4 +18,15 @@ node{
            }
             echo 'Trying to push image to docker hub'
     }
+
+    stage('Deploy to k8s'){
+                sh "./changeTag.sh $env.BUILD_NUMBER"
+                script{
+                    try{
+                        sh "kubectl apply -f ./update/"
+                    } catch(error) {
+                        sh "kubectl create -f ./update/"
+                    }
+                }
+    }
 }
