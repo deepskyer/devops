@@ -16,7 +16,7 @@ public class Controller {
     @ResponseBody
     public ResponseEntity<Map<String, String>> gethome(){
         Map<String, String> msg = new LinkedHashMap<>();
-        msg.put("test", "1");
+        msg.put("test", "2");
 
         return new ResponseEntity<>(msg, HttpStatus.OK);
     }
