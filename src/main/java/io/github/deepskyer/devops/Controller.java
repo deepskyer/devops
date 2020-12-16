@@ -16,6 +16,7 @@ public class Controller {
     @ResponseBody
     public ResponseEntity<Map<String, String>> gethome(){
         Map<String, String> msg = new LinkedHashMap<>();
+        msg.put("Step0", "get all requirements running");
         msg.put("Step1", "git commit triggers CI build");
         msg.put("Step2", "docker build your image");
         msg.put("Step3", "docker push your image to a hub");
